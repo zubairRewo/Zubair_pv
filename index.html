@@ -128,6 +128,8 @@
             margin-bottom: 40px;
             font-weight: 700;
             letter-spacing: -1px;
+            line-height: 120%;
+
         }
 
         .projects-grid {
@@ -157,8 +159,9 @@
 
         .status-badge {
             position: absolute;
-            top: 20px;
-            right: 20px;
+            top: 31px;
+            right: 2px;
+            margin: 0 25px;
             padding: 8px 16px;
             border-radius: 25px;
             font-size: 0.85rem;
@@ -281,7 +284,8 @@
 
         .published-apps {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            /* grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); */
+            grid-template-columns: 1fr 1fr;
             gap: 25px;
             margin-top: 30px;
         }
@@ -328,7 +332,14 @@
             .hero h1 {
                 font-size: 2.5rem;
             }
-            
+            /* .app-category{
+                width: 71% !important;
+            } */
+
+       .published-apps {
+         grid-template-columns: 1fr;
+         }
+
             .hero p {
                 font-size: 1rem;
             }
@@ -344,6 +355,12 @@
             .contact-buttons {
                 flex-direction: column;
                 align-items: center;
+                padding: 0px 18px 0px 18px;
+            }
+
+            .contact-btn {
+                width: 100%;
+                display: inline-block;
             }
         }
 
@@ -393,6 +410,22 @@
             0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
             50% { transform: translateY(-30px) rotate(180deg); opacity: 0.6; }
         }
+
+        @media (max-width:537px) {
+            .status-badge {
+                position: static;
+                margin: 0px;
+                display: inline-block;
+            }
+            .project-card {
+                padding: 20px;
+            }
+            .section h2 {
+                font-size: 2rem;
+            }
+        }
+
+
     </style>
 </head>
 <body>
