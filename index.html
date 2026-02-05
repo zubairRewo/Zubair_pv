@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +29,7 @@
         .hero {
             text-align: center;
             padding: 100px 0 80px 0;
-            background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
             border-radius: 30px;
             margin-bottom: 40px;
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -70,8 +71,8 @@
         }
 
         .contact-btn {
-            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
-            border: 1px solid rgba(255,255,255,0.2);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             color: #ffffff;
             padding: 15px 30px;
             border-radius: 50px;
@@ -86,9 +87,9 @@
         }
 
         .contact-btn:hover {
-            background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(255,255,255,0.1);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
         }
 
         .contact-btn.whatsapp:hover {
@@ -107,7 +108,7 @@
         }
 
         .section {
-            background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
             backdrop-filter: blur(20px);
             border-radius: 30px;
             padding: 50px;
@@ -140,8 +141,8 @@
         }
 
         .project-card {
-            background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.04) 100%);
-            border: 1px solid rgba(255,255,255,0.15);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.15);
             border-radius: 25px;
             padding: 40px;
             color: white;
@@ -149,12 +150,14 @@
             overflow: hidden;
             transition: all 0.3s ease;
             backdrop-filter: blur(15px);
+            display: flex;
+            flex-direction: column;
         }
 
         .project-card:hover {
             transform: translateY(-8px);
-            border-color: rgba(255,255,255,0.3);
-            box-shadow: 0 25px 50px rgba(255,255,255,0.1);
+            border-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 25px 50px rgba(255, 255, 255, 0.1);
         }
 
         .status-badge {
@@ -168,7 +171,7 @@
             font-weight: 700;
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .status-badge.live {
@@ -188,6 +191,7 @@
             font-weight: 700;
             margin-bottom: 15px;
             color: #ffffff;
+            padding-right: 180px;
         }
 
         .project-description {
@@ -220,7 +224,7 @@
         }
 
         .tech-stack {
-            margin-top: 25px;
+            margin-top: auto;
             padding-top: 25px;
             border-top: 1px solid rgba(255, 255, 255, 0.15);
         }
@@ -234,7 +238,7 @@
 
         .tech-tag {
             background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255,255,255,0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             padding: 10px 20px;
             border-radius: 30px;
             font-size: 0.9rem;
@@ -251,8 +255,8 @@
         }
 
         .skill-category {
-            background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.04) 100%);
-            border: 1px solid rgba(255,255,255,0.15);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.15);
             padding: 30px;
             border-radius: 20px;
             color: white;
@@ -261,7 +265,7 @@
         }
 
         .skill-category:hover {
-            border-color: rgba(255,255,255,0.25);
+            border-color: rgba(255, 255, 255, 0.25);
             transform: translateY(-3px);
         }
 
@@ -282,6 +286,171 @@
             color: #cccccc;
         }
 
+        .approach-flow {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 20px;
+            position: relative;
+            margin: 60px auto;
+        }
+
+        /* Connecting line for desktop */
+        .flow-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            width: calc(100% + 20px);
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent-color) 0%, rgba(255, 255, 255, 0.1) 100%);
+            z-index: 0;
+            opacity: 0.5;
+        }
+
+        .flow-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            position: relative;
+            z-index: 1;
+            flex: 1;
+            text-align: center;
+            --accent-color: #ffffff;
+        }
+
+        .flow-number {
+            width: 100px;
+            height: 100px;
+            background: rgba(30, 30, 30, 0.9);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            flex-shrink: 0;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            margin-bottom: 10px;
+            line-height: normal;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            color: #ffffff;
+        }
+
+        .flow-step:hover .flow-number {
+            transform: scale(1.1);
+            background: #ffffff;
+            color: #000000;
+            box-shadow: 0 0 40px rgba(255, 255, 255, 0.5);
+            border-color: #ffffff;
+        }
+
+        .flow-content {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            transition: all 0.4s ease;
+            width: 100%;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .flow-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+
+        .flow-content p {
+            flex: 1;
+        }
+
+        .flow-step:hover .flow-content {
+            border-color: rgba(255, 255, 255, 0.4);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .flow-step:hover .flow-content::before {
+            opacity: 1;
+        }
+
+        .flow-content h3 {
+            color: #ffffff;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        @media (max-width: 992px) {
+            .approach-flow {
+                flex-direction: column;
+                gap: 50px;
+                max-width: 600px;
+            }
+
+            .flow-step:not(:last-child)::after {
+                width: 2px;
+                height: calc(100% + 50px);
+                top: 50px;
+                left: 50px;
+                background: linear-gradient(to bottom, var(--accent-color) 0%, rgba(255, 255, 255, 0.1) 100%);
+            }
+
+            .flow-step {
+                flex-direction: row;
+                align-items: flex-start;
+                text-align: left;
+                gap: 30px;
+            }
+
+            .flow-number {
+                width: 100px;
+                height: 100px;
+                margin-bottom: 0;
+            }
+
+            .flow-step:hover .flow-content {
+                transform: translateX(15px);
+            }
+        }
+
+        @media (max-width: 537px) {
+            .flow-step:not(:last-child)::after {
+                left: 30px;
+                top: 30px;
+                height: calc(100% + 50px);
+            }
+
+            .flow-number {
+                width: 60px;
+                height: 60px;
+                font-size: 1.2rem;
+            }
+
+            .flow-step {
+                gap: 20px;
+            }
+
+            .flow-content {
+                padding: 15px;
+            }
+        }
+
         .published-apps {
             display: grid;
             /* grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); */
@@ -291,8 +460,8 @@
         }
 
         .app-category {
-            background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.04) 100%);
-            border: 1px solid rgba(255,255,255,0.15);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.15);
             padding: 30px;
             border-radius: 20px;
             backdrop-filter: blur(15px);
@@ -301,7 +470,7 @@
 
         .app-category:hover {
             transform: translateY(-5px);
-            border-color: rgba(255,255,255,0.25);
+            border-color: rgba(255, 255, 255, 0.25);
         }
 
         .app-category h3 {
@@ -332,22 +501,23 @@
             .hero h1 {
                 font-size: 2.5rem;
             }
+
             /* .app-category{
                 width: 71% !important;
             } */
 
-       .published-apps {
-         grid-template-columns: 1fr;
-         }
+            .published-apps {
+                grid-template-columns: 1fr;
+            }
 
             .hero p {
                 font-size: 1rem;
             }
-            
+
             .section {
                 padding: 30px;
             }
-            
+
             .projects-grid {
                 grid-template-columns: 1fr;
             }
@@ -407,8 +577,17 @@
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
-            50% { transform: translateY(-30px) rotate(180deg); opacity: 0.6; }
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+                opacity: 0.3;
+            }
+
+            50% {
+                transform: translateY(-30px) rotate(180deg);
+                opacity: 0.6;
+            }
         }
 
         @media (max-width:537px) {
@@ -417,17 +596,22 @@
                 margin: 0px;
                 display: inline-block;
             }
+
             .project-card {
                 padding: 20px;
             }
+
             .section h2 {
                 font-size: 2rem;
             }
+
+            .project-title {
+                padding-right: 0;
+            }
         }
-
-
     </style>
 </head>
+
 <body>
     <div class="floating-elements">
         <div class="floating-circle"></div>
@@ -439,8 +623,10 @@
         <div class="hero">
             <h1>SUBAIR PV</h1>
             <div class="title">Full Stack Developer</div>
-            <p>Experienced mobile and backend developer with a proven track record in building and launching full-scale, production-ready applications. Specializing in Flutter for cross-platform app development and Node.js/Laravel for robust backend systems.</p>
-            
+            <p>Experienced mobile and backend developer with a proven track record in building and launching full-scale,
+                production-ready applications. Specializing in Flutter for cross-platform app development and
+                Node.js/Laravel for robust backend systems.</p>
+
             <div class="contact-buttons">
                 <a href="https://wa.me/917592087406" class="contact-btn whatsapp" target="_blank">
                     <span>📱</span> WhatsApp
@@ -458,25 +644,28 @@
             <h2>Featured Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="status-badge live">✅ LIVE</div>
-                    <div class="project-title">Fixail</div>
-                    <div class="project-description">Professional home services platform connecting customers with verified technicians for AC repair, washing machine service, and more.</div>
-                    
+                    <div class="status-badge upcoming">🚀 SUPER APP UPDATE</div>
+                    <div class="project-title">Fixail (Super App)</div>
+                    <div class="project-description">Transforming into a Swiggy-style super app for home services,
+                        integrating multiple service layers into a single, seamless digital ecosystem.</div>
+
                     <ul class="features-list">
-                        <li>Customer & Technician Flutter Apps</li>
-                        <li>Real-time order tracking</li>
-                        <li>OTP-based authentication</li>
-                        <li>Push notifications & SMS alerts</li>
-                        <li>Payment integration</li>
-                        <li>WhatsApp support integration</li>
+                        <li><strong>Super App Architecture</strong>: Multiple apps in one</li>
+                        <li><strong>Fixail Quick</strong>: Instant cleaning & express services</li>
+                        <li><strong>Fixail Spare</strong>: Specialized module for spare parts</li>
+                        <li>Individual bookings for AC, appliances & more</li>
+                        <li>Real-time tracking & International scalability</li>
+                        <li>One-stop solution for all home maintenance</li>
                     </ul>
 
                     <div class="tech-stack">
                         <strong>Tech Stack:</strong>
                         <div class="tech-tags">
-                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Flutter (Super App)</span>
+                            <span class="tech-tag">Laravel</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Internationalization</span>
                             <span class="tech-tag">Firebase</span>
-                            <span class="tech-tag">WhatsApp API</span>
                         </div>
                     </div>
                 </div>
@@ -484,8 +673,9 @@
                 <div class="project-card">
                     <div class="status-badge live">✅ LIVE</div>
                     <div class="project-title">Fixail Care</div>
-                    <div class="project-description">Sub-brand focusing on branded product services (LG, IFB, Voltas) with seamless after-sales support and doorstep service.</div>
-                    
+                    <div class="project-description">Sub-brand focusing on branded product services (LG, IFB, Voltas)
+                        with seamless after-sales support and doorstep service.</div>
+
                     <ul class="features-list">
                         <li>Branch-based service management</li>
                         <li>Admin panel with role restrictions</li>
@@ -506,10 +696,91 @@
                 </div>
 
                 <div class="project-card">
-                     <div class="status-badge live">✅ LIVE</div>
+                    <div class="status-badge upcoming">🚀 IN DEVELOPMENT</div>
+                    <div class="project-title">Moestay</div>
+                    <div class="project-description">A complete hospitality ERP and booking platform designed for
+                        resorts and premium stays, centralizing room bookings, spa, events, and transport.</div>
+
+                    <ul class="features-list">
+                        <li>Room & Resort Management (Availability & Pricing)</li>
+                        <li>Spa & Wellness (Therapist scheduling & Slot bookings)</li>
+                        <li>Auditorium & Event Booking (Conflict prevention)</li>
+                        <li>Water Metro & Transport coordination</li>
+                        <li>Guest & Admin applications</li>
+                        <li>Revenue tracking & Business reports</li>
+                    </ul>
+
+                    <div class="tech-stack">
+                        <strong>Tech Stack:</strong>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Modular ERP Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="status-badge live">✅ LIVE</div>
+                    <div class="project-title">Zean ERP</div>
+                    <div class="project-description">A versatile enterprise ecosystem designed for supermarkets,
+                        restaurants, wholesale businesses, retail shops, food production units, and van sales
+                        operations.</div>
+
+                    <ul class="features-list">
+                        <li>Multipurpose POS (Supermarket, Restaurant, Retail)</li>
+                        <li>Van Sale & Distribution module</li>
+                        <li>Food Production & Recipe management</li>
+                        <li>Purchase, Sale, & Dynamic Barcoding</li>
+                        <li>Wholesale & Retail pricing tiers</li>
+                        <li>Advanced Financials & Role-based access</li>
+                    </ul>
+
+                    <div class="tech-stack">
+                        <strong>Tech Stack:</strong>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">REST API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="status-badge live">✅ LIVE</div>
+                    <div class="project-title">New Delmon</div>
+                    <div class="project-description">A comprehensive multi-vendor e-commerce ecosystem facilitating a
+                        complete marketplace for Administrators, Vendors, and Customers.</div>
+
+                    <ul class="features-list">
+                        <li><strong>Multi-Vendor System</strong>: Third-party vendor store management</li>
+                        <li><strong>Advanced Roles</strong>: Admin, Vendor, and Customer dashboards</li>
+                        <li><strong>Order & Returns</strong>: End-to-end processing & management</li>
+                        <li><strong>Secure Payments</strong>: Stripe integration & Cash on Delivery</li>
+                        <li><strong>Marketing & SEO</strong>: Coupons, banners, SEO & Analytics</li>
+                        <li><strong>Internationalization</strong>: Support for multiple languages</li>
+                    </ul>
+
+                    <div class="tech-stack">
+                        <strong>Tech Stack:</strong>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Laravel (API)</span>
+                            <span class="tech-tag">Next.js (Frontend)</span>
+                            <span class="tech-tag">Sanctum</span>
+                            <span class="tech-tag">Stripe</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="status-badge live">✅ LIVE</div>
                     <div class="project-title">Rewo Store</div>
-                    <div class="project-description">Construction material ordering platform connecting contractors with local suppliers and transporters for streamlined orders.</div>
-                    
+                    <div class="project-description">Construction material ordering platform connecting contractors with
+                        local suppliers and transporters for streamlined orders.</div>
+
                     <ul class="features-list">
                         <li>3 dedicated apps (Buyer, Supplier, Transporter)</li>
                         <li>Live delivery tracking with GPS</li>
@@ -528,6 +799,51 @@
                             <span class="tech-tag">Laravel</span>
                             <span class="tech-tag">Google Maps</span>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Development Approach</h2>
+            <div class="approach-flow">
+                <div class="flow-step">
+                    <div class="flow-number">01</div>
+                    <div class="flow-content">
+                        <h3>🔍 Discovery & Planning</h3>
+                        <p style="color: #cccccc; font-size: 1rem; line-height: 1.6;">Analyzing business requirements to
+                            create comprehensive technical roadmaps and feature sets that solve complex real-world
+                            problems.</p>
+                    </div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="flow-number">02</div>
+                    <div class="flow-content">
+                        <h3>🏗️ Modular Architecture</h3>
+                        <p style="color: #cccccc; font-size: 1rem; line-height: 1.6;">Designing scalable systems with
+                            modular architecture in Flutter and Node.js, ensuring your codebase remains maintainable as
+                            it grows.</p>
+                    </div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="flow-number">03</div>
+                    <div class="flow-content">
+                        <h3>⚡ Performance & UX</h3>
+                        <p style="color: #cccccc; font-size: 1rem; line-height: 1.6;">Crafting premium user experiences
+                            with micro-animations, fast load times, and intuitive navigation across all cross-platform
+                            interfaces.</p>
+                    </div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="flow-number">04</div>
+                    <div class="flow-content">
+                        <h3>🚀 Continuous Delivery</h3>
+                        <p style="color: #cccccc; font-size: 1rem; line-height: 1.6;">Executing reliable deployment
+                            strategies for Play Store and production servers, with a strong focus on stability and
+                            post-launch support.</p>
                     </div>
                 </div>
             </div>
@@ -582,28 +898,8 @@
             </div>
         </div>
 
-        <div class="section">
-            <h2>Published Applications</h2>
-            <div class="published-apps">
-                <div class="app-category live">
-                    <h3>✅ Live on Play Store</h3>
-                    <ul class="app-list">
-                        <li>• Fixail (Customer App)</li>
-                        <li>• Fixail Partner (Technician App)</li>
-                        <li>• Fixail Care (Service App)</li>
-                    </ul>
-                </div>
-                
-               <div class="app-category live">
-                    <h3>✅ Live on Play Store</h3>
-                    <ul class="app-list">
-                        <li>• Rewo Store (Buyer)</li>
-                        <li>• Rewo Store (Supplier)</li>
-                        <li>• Rewo Store (Transporter)</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+
     </div>
 </body>
+
 </html>
