@@ -295,17 +295,18 @@
             margin: 60px auto;
         }
 
-        /* Connecting line for desktop */
+        /* Connecting line for desktop - bridging gaps only */
         .flow-step:not(:last-child)::after {
             content: '';
             position: absolute;
             top: 50px;
-            left: 50%;
-            width: calc(100% + 20px);
+            left: calc(50% + 50px);
+            /* Start at right edge of circle (50px from center) */
+            width: calc(100% - 100px + 20px);
+            /* Fill the gap (total - two halves + gap) */
             height: 2px;
-            background: linear-gradient(90deg, var(--accent-color) 0%, rgba(255, 255, 255, 0.1) 100%);
+            background: rgba(255, 255, 255, 0.4);
             z-index: 0;
-            opacity: 0.5;
         }
 
         .flow-step {
@@ -405,10 +406,13 @@
 
             .flow-step:not(:last-child)::after {
                 width: 2px;
-                height: calc(100% + 50px);
-                top: 50px;
+                height: calc(100% - 100px + 50px);
+                /* Fill gap between circles */
+                top: 100px;
+                /* Below circle */
                 left: 50px;
-                background: linear-gradient(to bottom, var(--accent-color) 0%, rgba(255, 255, 255, 0.1) 100%);
+                /* Center of circle */
+                background: rgba(255, 255, 255, 0.4);
             }
 
             .flow-step {
@@ -432,8 +436,9 @@
         @media (max-width: 537px) {
             .flow-step:not(:last-child)::after {
                 left: 30px;
-                top: 30px;
-                height: calc(100% + 50px);
+                top: 60px;
+                /* Below smaller circle */
+                height: calc(100% - 60px + 50px);
             }
 
             .flow-number {
