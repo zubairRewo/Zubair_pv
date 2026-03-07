@@ -186,12 +186,6 @@ section { padding:88px 0; }
 .pc:nth-child(4)  { --ca:#ff70b8; --cr:255,112,184; }
 .pc:nth-child(5)  { --ca:#a07aff; --cr:160,122,255; }
 .pc:nth-child(6)  { --ca:#4effc6; --cr:78,255,198;  }
-.pc:nth-child(7)  { --ca:#ff6b6b; --cr:255,107,107; }
-.pc:nth-child(8)  { --ca:#ffd166; --cr:255,209,102; }
-.pc:nth-child(9)  { --ca:#06d6a0; --cr:6,214,160;   }
-.pc:nth-child(10) { --ca:#74b9ff; --cr:116,185,255; }
-.pc:nth-child(11) { --ca:#fd79a8; --cr:253,121,168; }
-.pc:nth-child(12) { --ca:#a29bfe; --cr:162,155,254; }
 
 .pgrid {
   display:grid;
@@ -202,9 +196,7 @@ section { padding:88px 0; }
 /* Mosaic: cards 1, 4, 9, 12 span 2 cols for visual rhythm */
 .pgrid .pc:nth-child(1)  { grid-column: span 2; }
 .pgrid .pc:nth-child(6)  { grid-column: span 2; }
-.pgrid .pc:nth-child(7)  { grid-column: span 1; }
-.pgrid .pc:nth-child(10) { grid-column: span 2; }
-
+.pgrid .pgrid 
 .pc {
   background:var(--sf);
   border:1px solid var(--border);
@@ -286,8 +278,7 @@ section { padding:88px 0; }
 }
 /* Wide cards get bigger title */
 .pc:nth-child(1) .pc-name,
-.pc:nth-child(6) .pc-name,
-.pc:nth-child(10) .pc-name { font-size:1.55rem; }
+.pc:nth-child(6) .pc-name { font-size:1.65rem; }
 
 .pc-desc { font-size:0.875rem; color:#6060820; line-height:1.62; margin-bottom:18px; color:#707090; }
 
@@ -455,9 +446,7 @@ footer {
   .pgrid { grid-template-columns:repeat(2,1fr); }
   .pgrid .pc:nth-child(1),
   .pgrid .pc:nth-child(6),
-  .pgrid .pc:nth-child(10) { grid-column:span 2; }
-  .pgrid .pc:nth-child(7) { grid-column:span 1; }
-  .arow { grid-template-columns:repeat(2,1fr); }
+  .pgrid   .pgrid   .arow { grid-template-columns:repeat(2,1fr); }
   .hero { grid-template-columns:1fr; }
   .hero-stats { flex-direction:row; gap:10px; }
   .sbox { flex:1; }
@@ -511,15 +500,15 @@ footer {
   </div>
   <div class="hero-stats">
     <div class="sbox">
-      <div class="sval">10<sup>+</sup></div>
-      <div class="slbl">Projects</div>
+      <div class="sval">6<sup>+</sup></div>
+      <div class="slbl">Live Projects</div>
     </div>
     <div class="sbox">
       <div class="sval">3<sup>+</sup></div>
       <div class="slbl">Yrs Exp</div>
     </div>
     <div class="sbox">
-      <div class="sval">15<sup>+</sup></div>
+      <div class="sval">10<sup>+</sup></div>
       <div class="slbl">Apps Shipped</div>
     </div>
   </div>
@@ -539,7 +528,7 @@ footer {
     <div class="pc">
       <div class="pc-line"></div>
       <div class="pc-body">
-        <div class="pc-top"><span class="pc-idx">01 / 12</span><span class="badge wip">Super App Update</span></div>
+        <div class="pc-top"><span class="pc-idx">01 / 06</span><span class="badge wip">Super App Update</span></div>
         <div class="pc-ico">🏠</div>
         <div class="pc-name">Fixail Super App</div>
         <div class="pc-desc">Swiggy-style super app for home services — AC, repairs, cleaning and spare parts in one seamless ecosystem.</div>
@@ -558,7 +547,7 @@ footer {
     <div class="pc">
       <div class="pc-line"></div>
       <div class="pc-body">
-        <div class="pc-top"><span class="pc-idx">02 / 12</span><span class="badge live">Live</span></div>
+        <div class="pc-top"><span class="pc-idx">02 / 06</span><span class="badge live">Live</span></div>
         <div class="pc-ico">🔧</div>
         <div class="pc-name">Fixail Care</div>
         <div class="pc-desc">Branded after-sales service for LG, IFB, Voltas — branch management, technician dispatch and invoicing.</div>
@@ -577,7 +566,7 @@ footer {
     <div class="pc">
       <div class="pc-line"></div>
       <div class="pc-body">
-        <div class="pc-top"><span class="pc-idx">03 / 12</span><span class="badge wip">In Development</span></div>
+        <div class="pc-top"><span class="pc-idx">03 / 06</span><span class="badge wip">In Development</span></div>
         <div class="pc-ico">🏨</div>
         <div class="pc-name">Moestay</div>
         <div class="pc-desc">Complete hospitality ERP for resorts — rooms, spa scheduling, events and water transport, all centralised.</div>
@@ -593,7 +582,7 @@ footer {
     <div class="pc">
       <div class="pc-line"></div>
       <div class="pc-body">
-        <div class="pc-top"><span class="pc-idx">04 / 12</span><span class="badge live">Live</span></div>
+        <div class="pc-top"><span class="pc-idx">04 / 06</span><span class="badge live">Live</span></div>
         <div class="pc-ico">🏪</div>
         <div class="pc-name">Zean ERP</div>
         <div class="pc-desc">Enterprise system for supermarkets, restaurants, wholesale, retail and van sales — all in one platform.</div>
@@ -609,7 +598,7 @@ footer {
     <div class="pc">
       <div class="pc-line"></div>
       <div class="pc-body">
-        <div class="pc-top"><span class="pc-idx">05 / 12</span><span class="badge live">Live</span></div>
+        <div class="pc-top"><span class="pc-idx">05 / 06</span><span class="badge live">Live</span></div>
         <div class="pc-ico">🛍️</div>
         <div class="pc-name">New Delmon</div>
         <div class="pc-desc">Multi-vendor e-commerce marketplace — Admin, Vendor, Customer dashboards, Stripe, SEO and analytics.</div>
@@ -628,7 +617,7 @@ footer {
     <div class="pc">
       <div class="pc-line"></div>
       <div class="pc-body">
-        <div class="pc-top"><span class="pc-idx">06 / 12</span><span class="badge delivered">Delivered</span></div>
+        <div class="pc-top"><span class="pc-idx">06 / 06</span><span class="badge delivered">Delivered</span></div>
         <div class="pc-ico">🏗️</div>
         <div class="pc-name">Rewo Store</div>
         <div class="pc-desc">Construction material platform linking contractors, suppliers and transporters with live GPS and multi-role approval.</div>
@@ -642,102 +631,6 @@ footer {
         </div>
       </div>
       <div class="pc-ft"><span class="tch">Flutter</span><span class="tch">Node.js</span><span class="tch">MySQL</span><span class="tch">Laravel</span><span class="tch">Google Maps</span></div>
-    </div>
-
-    <!-- 07 Zean Delivery -->
-    <div class="pc">
-      <div class="pc-line"></div>
-      <div class="pc-body">
-        <div class="pc-top"><span class="pc-idx">07 / 12</span><span class="badge live">Live</span></div>
-        <div class="pc-ico">🛵</div>
-        <div class="pc-name">Zean Delivery</div>
-        <div class="pc-desc">Last-mile delivery management module for Zean ERP — rider assignment, route optimisation and live order tracking.</div>
-        <div class="pc-chips">
-          <span class="chip hi">Rider Assignment</span><span class="chip">Route Optimisation</span>
-          <span class="chip">Live Order Tracking</span><span class="chip">Delivery Proof</span><span class="chip">ERP Integration</span>
-        </div>
-      </div>
-      <div class="pc-ft"><span class="tch">Flutter</span><span class="tch">Node.js</span><span class="tch">MySQL</span><span class="tch">Google Maps</span></div>
-    </div>
-
-    <!-- 08 Salon Management -->
-    <div class="pc">
-      <div class="pc-line"></div>
-      <div class="pc-body">
-        <div class="pc-top"><span class="pc-idx">08 / 12</span><span class="badge live">Live</span></div>
-        <div class="pc-ico">💈</div>
-        <div class="pc-name">Salon Pro</div>
-        <div class="pc-desc">End-to-end salon management system — appointments, stylist scheduling, billing and customer loyalty tracking.</div>
-        <div class="pc-chips">
-          <span class="chip hi">Appointment Booking</span><span class="chip">Stylist Scheduling</span>
-          <span class="chip">Billing & POS</span><span class="chip">Loyalty Points</span><span class="chip">Customer Profiles</span>
-        </div>
-      </div>
-      <div class="pc-ft"><span class="tch">Flutter</span><span class="tch">Node.js</span><span class="tch">MySQL</span><span class="tch">Firebase</span></div>
-    </div>
-
-    <!-- 09 School ERP -->
-    <div class="pc">
-      <div class="pc-line"></div>
-      <div class="pc-body">
-        <div class="pc-top"><span class="pc-idx">09 / 12</span><span class="badge live">Live</span></div>
-        <div class="pc-ico">🎓</div>
-        <div class="pc-name">School ERP</div>
-        <div class="pc-desc">Comprehensive school management platform — student records, attendance, fee collection, timetable and parent communication.</div>
-        <div class="pc-chips">
-          <span class="chip hi">Student Management</span><span class="chip">Attendance Tracking</span>
-          <span class="chip">Fee Collection</span><span class="chip">Timetable</span><span class="chip">Parent Portal</span>
-        </div>
-      </div>
-      <div class="pc-ft"><span class="tch">Flutter</span><span class="tch">Laravel</span><span class="tch">MySQL</span><span class="tch">Firebase</span></div>
-    </div>
-
-    <!-- 10 Field Service -->
-    <div class="pc">
-      <div class="pc-line"></div>
-      <div class="pc-body">
-        <div class="pc-top"><span class="pc-idx">10 / 12</span><span class="badge live">Live</span></div>
-        <div class="pc-ico">🔩</div>
-        <div class="pc-name">Field Service App</div>
-        <div class="pc-desc">Mobile-first field technician app with job management, photo capture, digital signatures and offline sync.</div>
-        <div class="pc-chips">
-          <span class="chip hi">Offline Sync</span><span class="chip">Job Management</span>
-          <span class="chip">Photo Capture</span><span class="chip">Digital Signatures</span><span class="chip">GPS Check-in</span>
-        </div>
-      </div>
-      <div class="pc-ft"><span class="tch">Flutter</span><span class="tch">Node.js</span><span class="tch">SQLite</span><span class="tch">REST API</span></div>
-    </div>
-
-    <!-- 11 Pharmacy POS -->
-    <div class="pc">
-      <div class="pc-line"></div>
-      <div class="pc-body">
-        <div class="pc-top"><span class="pc-idx">11 / 12</span><span class="badge live">Live</span></div>
-        <div class="pc-ico">💊</div>
-        <div class="pc-name">Pharmacy POS</div>
-        <div class="pc-desc">Pharmacy point-of-sale with drug inventory, expiry tracking, prescription management and supplier reordering.</div>
-        <div class="pc-chips">
-          <span class="chip hi">Drug Inventory</span><span class="chip">Expiry Tracking</span>
-          <span class="chip">Prescription Mgmt</span><span class="chip">Supplier Reorder</span><span class="chip">Sales Reports</span>
-        </div>
-      </div>
-      <div class="pc-ft"><span class="tch">Flutter</span><span class="tch">Node.js</span><span class="tch">MySQL</span><span class="tch">Barcode</span></div>
-    </div>
-
-    <!-- 12 Real Estate -->
-    <div class="pc">
-      <div class="pc-line"></div>
-      <div class="pc-body">
-        <div class="pc-top"><span class="pc-idx">12 / 12</span><span class="badge live">Live</span></div>
-        <div class="pc-ico">🏢</div>
-        <div class="pc-name">Real Estate Portal</div>
-        <div class="pc-desc">Property listing and lead management portal — agent dashboards, enquiry tracking, site visits and commission reports.</div>
-        <div class="pc-chips">
-          <span class="chip hi">Property Listings</span><span class="chip">Lead Management</span>
-          <span class="chip">Agent Dashboards</span><span class="chip">Site Visit Tracker</span><span class="chip">Commission Reports</span>
-        </div>
-      </div>
-      <div class="pc-ft"><span class="tch">Flutter</span><span class="tch">Laravel</span><span class="tch">MySQL</span><span class="tch">Google Maps</span></div>
     </div>
 
   </div>
