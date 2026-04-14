@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subair PV — Senior Full Stack Architect</title>
+  <meta name="description"
+    content="Senior Full Stack Architect specializing in modular ERPs, high-concurrency retail systems, and premium mobile super apps. Building scalable digital ecosystems with Flutter, Node.js, and Laravel.">
+  <meta name="keywords"
+    content="Subair PV, Full Stack Architect, Flutter Developer, Node.js, Laravel, ERP Specialist, Mobile Super App, System Architecture, Kerala India">
+  <meta property="og:title" content="Subair PV — Senior Full Stack Architect">
+  <meta property="og:description"
+    content="Building production-ready apps that power real businesses. Specialist in modular architecture and high-performance backends.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800;900&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="dark-mode"> <!-- Default to dark mode -->
+
+  <div id="scroll-progress"></div>
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-in">
+      <a href="#" class="logo">
+        <div class="logo-pip"></div>Subair PV
+      </a>
+      <div class="nav-r">
+        <ul class="nav-links">
+          <li><a href="#projects">Work</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#skills">Skills</a></li>
+        </ul>
+        <div class="theme-toggle" id="theme-toggle" title="Toggle Theme">
+          <div class="toggle-sun">☀️</div>
+          <div class="toggle-moon">🌙</div>
+        </div>
+        <div class="social-links-top">
+          <a href="https://github.com/Zubairpv" target="_blank" title="GitHub"><svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+              </path>
+            </svg></a>
+          <a href="https://linkedin.com/in/zubair-pv" target="_blank" title="LinkedIn"><svg viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg></a>
+        </div>
+        <a href="https://wa.me/917592087406" target="_blank" class="hire-btn">Hire Me →</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="wrap">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-l">
+        <div class="avail">
+          <div class="avail-dot"></div>Open to Projects
+        </div>
+        <h1 class="hname">SUBAIR<br><span class="ghost">PV<span class="lime">.</span></span></h1>
+        <p class="htag">Senior Full Stack Architect building high-concurrency enterprise apps and premium consumer
+          ecosystems. Flutter · Node.js · Laravel — turning complex business logic into seamless products.</p>
+        <div class="hbtns">
+          <a href="https://wa.me/917592087406" target="_blank" class="hbtn p">💬 WhatsApp Me</a>
+          <a href="#projects" class="hbtn g">View Portfolio ↓</a>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="sbox">
+          <div class="sval">8<sup>+</sup></div>
+          <div class="slbl">Modular ERPs</div>
+        </div>
+        <div class="sbox">
+          <div class="sval">15<sup>+</sup></div>
+          <div class="slbl">Apps Shipped</div>
+        </div>
+        <div class="sbox">
+          <div class="sval">3<sup>+</sup></div>
+          <div class="slbl">Yrs Exp</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="sh reveal">
+        <div class="eyebrow">Portfolio</div>
+        <h2 class="stitle">Featured Ecosystems</h2>
+        <p class="ssub">From multi-vendor marketplaces to complex after-sales ERPs — engineered for scale and
+          reliability.</p>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="filter-bar reveal">
+        <div class="search-box">
+          <input type="text" id="project-search" placeholder="Search by tech, name or category...">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </div>
+        <div class="filter-tags" id="tag-filters">
+          <button class="tag-btn active" data-filter="all">All Work</button>
+          <button class="tag-btn" data-filter="Mobile">Mobile Apps</button>
+          <button class="tag-btn" data-filter="Enterprise">ERP & Enterprise</button>
+          <button class="tag-btn" data-filter="E-commerce">E-commerce</button>
+          <button class="tag-btn" data-filter="Specialized">Case Studies</button>
+        </div>
+      </div>
+
+      <!-- Dynamic Project Grid -->
+      <div class="pgrid reveal" id="project-grid">
+        <!-- Projects will be injected here by app.js -->
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process">
+      <div class="sh reveal">
+        <div class="eyebrow">Methodology</div>
+        <h2 class="stitle">The Architect's Process</h2>
+        <p class="ssub">Engineering software that isn't just functional, but architecturally sound and ready for 100x
+          growth.</p>
+      </div>
+      <div class="arow reveal">
+        <div class="acard">
+          <div class="abg">01</div>
+          <div class="aico">🔍</div>
+          <div class="atitle">Business Discovery</div>
+          <p class="adesc">Mapping business logic, multi-role dependencies, and fiscal requirements before architecture
+            design.</p>
+        </div>
+        <div class="acard">
+          <div class="abg">02</div>
+          <div class="aico">🏗️</div>
+          <div class="atitle">Modular Engineering</div>
+          <p class="adesc">Building micro-frontend apps and service-oriented backends aligned with your specific scaling
+            roadmap.</p>
+        </div>
+        <div class="acard">
+          <div class="abg">03</div>
+          <div class="aico">⚡</div>
+          <div class="atitle">Atomic UX & Speed</div>
+          <p class="adesc">Prioritizing zero-friction interactions, sub-100ms response times, and premium aesthetic
+            consistency.</p>
+        </div>
+        <div class="acard">
+          <div class="abg">04</div>
+          <div class="aico">🚀</div>
+          <div class="atitle">Total Lifecycle Ownership</div>
+          <p class="adesc">Continuous delivery, automated deployment monitoring, and long-term architectural
+            stewardship.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="sh reveal">
+        <div class="eyebrow">Arsenal</div>
+        <h2 class="stitle">Core Expertise</h2>
+        <p class="ssub">Mastering the intersection of high-performance backends and beautiful frontend experiences.</p>
+      </div>
+      <div class="skgrid reveal">
+        <div class="skcard">
+          <div class="skhead">
+            <div class="skico">📱</div>
+            <div class="sktitle">Mobile & Super Apps</div>
+          </div>
+          <div class="skpills">
+            <span class="skpill">Flutter & Dart</span><span class="skpill">Micro-Frontend Apps</span>
+            <span class="skpill">Riverpod / Hooks</span><span class="skpill">Firebase Ecosystem</span><span
+              class="skpill">Play Store/App Store</span>
+          </div>
+        </div>
+        <div class="skcard">
+          <div class="skhead">
+            <div class="skico">⚙️</div>
+            <div class="sktitle">Backend & Systems</div>
+          </div>
+          <div class="skpills">
+            <span class="skpill">Node.js & Express</span><span class="skpill">Laravel (PHP 8.2+)</span>
+            <span class="skpill">PostgreSQL / MySQL</span><span class="skpill">MongoDB</span><span class="skpill">Redis
+              & BullMQ</span>
+          </div>
+        </div>
+        <div class="skcard">
+          <div class="skhead">
+            <div class="skico">🔌</div>
+            <div class="sktitle">Advanced Architecture</div>
+          </div>
+          <div class="skpills">
+            <span class="skpill">Real-time WebSockets</span><span class="skpill">RESTful API Design</span>
+            <span class="skpill">Payment Gateway Agnostic</span><span class="skpill">Event-Driven Services</span><span
+              class="skpill">Multi-Tenant Isolation</span>
+          </div>
+        </div>
+        <div class="skcard">
+          <div class="skhead">
+            <div class="skico">🛠️</div>
+            <div class="sktitle">Automation & DevOps</div>
+          </div>
+          <div class="skpills">
+            <span class="skpill">CI/CD Workflows</span><span class="skpill">AWS S3 / Cloudinary</span>
+            <span class="skpill">Dockerization</span><span class="skpill">Postman / Insomnia</span><span
+              class="skpill">Figma-to-Code</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="cta reveal">
+      <div class="cta-glow"></div>
+      <h2>Ready to architect your <span>vision?</span></h2>
+      <p>Whether it's a multi-country super app or an enterprise ERP, I'll take it from blueprint to high-performance
+        production.</p>
+      <div class="ctabtns">
+        <a href="https://wa.me/917592087406" target="_blank" class="b1">💬 WhatsApp Message</a>
+        <a href="mailto:subairpv.work@gmail.com" class="b2">✉️ Email Inquiry</a>
+        <a href="tel:+917592087406" class="b3">📞 Direct Call</a>
+      </div>
+    </div>
+
+  </div><!-- /wrap -->
+
+  <!-- PROJECT MODAL -->
+  <div class="modal-overlay" id="project-modal">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close">✕</button>
+      <div class="modal-scroll" id="modal-body">
+        <!-- Content injected by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Subair PV · Technical System Architect · Kerala, India</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
