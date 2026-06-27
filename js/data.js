@@ -67,6 +67,74 @@ const projectsData = [
     links: { playStore: "https://play.google.com/store/apps/details?id=com.fixail.care" }
   },
   {
+    id: "waaco",
+    title: "WAACO",
+    category: "ERP",
+    tags: ["NestJS", "Flutter", "PostgreSQL", "Prisma", "BullMQ"],
+    status: "Production",
+    icon: "🛠️",
+    accent: "#ff9f5a",
+    subtitle: "Field Service & Quotation Management Platform",
+    description: "A full-stack platform for a Saudi facilities-maintenance company that digitizes the entire service lifecycle — Order → Work Order → Site Inspection → Quotation → Approval → Invoice → Payment — across office staff, field technicians, and brand clients.",
+    problem: "Multi-brand facilities maintenance ran on paper and WhatsApp: office, field, and client lost visibility once a job left the desk, technicians could self-report being on-site, and client-submitted amounts made billing untrustworthy and prone to retroactive change.",
+    solution: "Three coordinated apps over a single backend and data model. Two explicit state machines (office approval vs. field execution) replace free-text statuses, money is recalculated server-side, and an on-site start-code gate verifies presence — turning a fragmented workflow into one auditable system.",
+    architecture: {
+      backend: "NestJS 10 + Prisma + PostgreSQL core exposing a role-aware REST API. Money is server-authoritative (subtotals, 15% Saudi VAT, totals), and approved quotations convert to invoices that snapshot line items so historical billing never changes.",
+      apps: "Two Flutter (Riverpod + go_router) clients — an admin console for office operations and a technician mobile app with geolocation, photo capture, and signature — sharing the same backend and brand-scoped guards.",
+      infrastructure: "Async by default: BullMQ + Redis workers handle PDF rendering, FCM push dispatch, and overdue-invoice sweeps. Dockerized API/Postgres/Redis with structured Pino logging."
+    },
+    logic: [
+      { h: "On-Site Presence Verification", p: "A one-time start code is sent to the client's branch contact and must be entered on arrival, so a technician cannot self-report being on-site — a fraud-prevention gate." },
+      { h: "Dual State Machine Engine", p: "The Order tracks the office approval lifecycle while its Work Order tracks granular field execution (pending → accepted → on_the_way → started → in_progress → completed → closed); invalid transitions are rejected, not silently allowed." },
+      { h: "Server-Authoritative Billing", p: "All amounts are recomputed server-side and client-submitted totals are ignored; approved quotations snapshot into immutable invoice line items for audit integrity." }
+    ],
+    features: [
+      "Six-Role RBAC with Server-Enforced Brand Scoping",
+      "Guided Field Flow: Accept → Travel → Arrive → Inspect → Quote",
+      "On-Site Start-Code Anti-Fraud Verification",
+      "Quotation → Approval → Invoice Snapshot Pipeline",
+      "PDF Generation, WhatsApp Share & FCM Notifications"
+    ],
+    techStack: ["NestJS 10", "TypeScript", "PostgreSQL 16", "Prisma", "Flutter", "Riverpod", "BullMQ + Redis", "Cloudinary", "Firebase Messaging"],
+    role: "Designed and built the full stack — data model, API, role/permission system, and both Flutter clients — including the field-execution state machine, the on-site start-code verification gate, and the server-authoritative quotation/invoice billing pipeline.",
+    impact: "Replaced paper-and-WhatsApp coordination with one connected system, giving office, field, and brand clients scoped real-time visibility while guaranteeing tamper-proof, audit-accurate billing.",
+    links: {}
+  },
+  {
+    id: "ait-lms",
+    title: "AIT LMS",
+    category: "ERP",
+    tags: ["Next.js", "Express 5", "PostgreSQL", "JWT", "RBAC"],
+    status: "Production",
+    icon: "🎓",
+    accent: "#5ad1ff",
+    subtitle: "Learning Management System for a Training Institute",
+    description: "A full-stack platform that runs the day-to-day operations of a training institute — enrolling students, managing courses and batches, tracking attendance and lesson progress, handling fees and staff salaries, and capturing sales leads — all behind a role-based permission system.",
+    problem: "A training institute juggled enrolment, batches, attendance, fees, salaries, and a sales pipeline across disconnected tools, with no granular control over who could do what and no single source of truth feeding leads into actual enrolments.",
+    solution: "A three-app monorepo over one shared REST API: a student learning platform, an internal staff admin panel, and a framework-light Express backend. Every sensitive action is gated by a named permission, and a won lead converts atomically into an enrolled student with no double entry.",
+    architecture: {
+      backend: "Express 5 + plain JavaScript (ESM), deliberately framework-light. PostgreSQL accessed through raw parameterized SQL via the pg pool (no ORM), organized into per-feature modules following a consistent controller → service → routes pattern; controllers stay thin, services own the SQL.",
+      frontend: "Two Next.js 16 + React 19 + TypeScript clients styled with Tailwind v4. A typed API client layer wraps every backend resource, and list pages render a desktop table plus a shared mobile-first EntityCard, toggled by breakpoint, so the admin panel is fully usable on a phone.",
+      security: "JWT auth with role/permission middleware, Zod request validation, and bcrypt hashing. Public endpoints are isolated in dedicated *.public.routes.js files, separate from staff-authenticated routes."
+    },
+    logic: [
+      { h: "Lead-to-Student Conversion", p: "Converting a won lead atomically finds-or-creates a student and upserts an enrollment, mirroring the approval flow, so the sales pipeline feeds directly into the LMS with zero double entry." },
+      { h: "Per-Batch Lesson Progress", p: "Trainers mark progress at the batch level (mirroring attendance); the API returns modules and lessons in order and computes the 'next lesson in sequence' automatically." },
+      { h: "Granular Permission System", p: "Every sensitive action is gated by a named permission (e.g. leads.view, progress.mark), with a roles matrix in the admin UI to grant them per role." }
+    ],
+    features: [
+      "Permission-Gated RBAC with Per-Role Matrix",
+      "Sales Lead Pipeline → One-Step Student Conversion",
+      "Batch-Level Attendance & Lesson Progress Tracking",
+      "Fees, Salary & Payment-History Modules",
+      "Animated Student Learning Experience (Next.js)"
+    ],
+    techStack: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS v4", "Express 5", "PostgreSQL", "JWT", "Zod", "Cloudinary"],
+    role: "Designed and built the full stack end to end — database schema and migrations, the modular Express API, JWT auth and the role/permission system, and both Next.js front ends including the responsive admin UI and the student learning experience.",
+    impact: "Unified enrolment, courses, attendance, fees, salary, and a sales pipeline into one predictable, permission-controlled system where every new feature follows the same controller/service/routes recipe, keeping the codebase scalable as it grows.",
+    links: {}
+  },
+  {
     id: "moestay",
     title: "moestay",
     category: "Hospitality",
